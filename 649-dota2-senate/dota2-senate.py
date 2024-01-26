@@ -14,3 +14,4 @@ class Solution:
                 dires.append(d_i + n) # in case we loop
 
         return "Radiant" if len(radiants) > len(dires) else "Dire"
+
