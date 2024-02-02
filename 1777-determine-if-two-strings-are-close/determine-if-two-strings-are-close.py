@@ -10,15 +10,11 @@ class Solution:
         # for c2 in word2:
         #     d2[c2] += 1
 
-        d1 = [0] * 26
-        d2 = [0] * 26
+        d1, d2 = Counter(word1), Counter(word2)
 
-        for c1 in word1:
-            d1[ord(c1) - ord('a')] += 1
-        for c2 in word2:
-            d2[ord(c2) - ord('a')] += 1
+        s1, s2 = sorted(d1.values()), sorted(d2.values())
 
-        return sorted(d1) == sorted(d2) and set(word1) == set(word2)
+        return sorted(d1.values()) == sorted(d2.values()) and set(d1.keys()) == set(d2.keys())
 
         
             
