@@ -3,7 +3,7 @@ class Solution:
         s1 = []
 
         for i in range(len(s)):
-            if s[i] == "*" and len(s1) > 0:
+            if s[i] == "*":
                 # if s1 and s1[-1] != "*":
                     s1.pop()
             else:
